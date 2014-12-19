@@ -20,6 +20,10 @@
     ```
     npm install -g grunt-cli
     ```
++ 安装`bower`包管理工具
+    ```
+    npm install -g bower
+    ```
 + 在`nodejs`中安装`yeoman`和`yeoman express`的生成器
     ```
     npm install -g yo
@@ -37,4 +41,28 @@
     > ? Select a css preprocessor to use (Sass Requires Ruby): None
 
     > ? Select a build tool to use: Grunt
++ 完成项目初始化之后使用`grunt`，然后访问`localhost:3000`看到`express`就对了
+
+### 对已经生成的项目使用构建工具
+在`clone`项目之后进行项目构建
+
++ 安装`nodejs`: 在`nodejs`的站点上下载并进行安装[http://nodejs.org/](http://nodejs.org/)
++ 在`nodejs`的环境中安装`grunt-cli`
+    ```
+    npm install -g grunt-cli
+    ```
++ 安装`bower`包管理工具
+    ```
+    npm install -g bower
+    ```
++ 在`nodejs`中安装`yeoman`和`yeoman express`的生成器
+    ```
+    npm install -g yo
+    npm install -g generator-express
+    ```
+＋ 进入项目目录，安装开发依赖包
+    ```
+    npm install
+    bower install
+    ```
 + 完成项目初始化之后使用`grunt`，然后访问`localhost:3000`看到`express`就对了
