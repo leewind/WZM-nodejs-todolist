@@ -41,7 +41,7 @@
     > ? Select a css preprocessor to use (Sass Requires Ruby): None
 
     > ? Select a build tool to use: Grunt
-+ 完成项目初始化之后使用`grunt`，然后访问`localhost:3000`看到`express`就对了
++ 完成项目初始化之后在根目录输入`grunt`或者`node bin/www`，然后访问`localhost:3000`看到`express`就对了
 
 ### 对已经生成的项目使用构建工具
 在`clone`项目之后进行项目构建
@@ -65,4 +65,4 @@
     npm install
     bower install
     ```
-+ 完成项目初始化之后使用`grunt`，然后访问`localhost:3000`看到`express`就对了
++ 完成项目初始化之后在根目录输入`grunt`或者`node bin/www`，然后访问`localhost:3000`看到`express`就对了
