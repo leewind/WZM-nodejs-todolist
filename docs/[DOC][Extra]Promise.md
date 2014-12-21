@@ -42,3 +42,10 @@ db.set('key1', 'value1', function(err) {
 > + pending - The initial state of a promise.
 > + fulfilled - The state of a promise representing a successful operation.
 > + rejected - The state of a promise representing a failed operation.
+
+##参考
++ [https://www.promisejs.org/](https://www.promisejs.org/)
++ [http://calculist.org/blog/2011/12/14/why-coroutines-wont-work-on-the-web/](http://calculist.org/blog/2011/12/14/why-coroutines-wont-work-on-the-web/)
++ [https://github.com/kriskowal/q](https://github.com/kriskowal/q)
++ [https://github.com/kriszyp/node-promise](https://github.com/kriszyp/node-promise)
++ [http://www.ituring.com.cn/article/54547](http://www.ituring.com.cn/article/54547)
