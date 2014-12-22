@@ -8,6 +8,10 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/user');
 var demo = require('./routes/demo');
+var todo = require('./routes/todo');
+
+var mysql = require('./controller/mysql');
+mysql.connect();
 
 var app = express();
 
@@ -28,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/demo', demo);
+app.use('/todo', todo);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

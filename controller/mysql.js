@@ -8,22 +8,34 @@ controller.connect = function () {
   connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : ''
+    password : '',
+    database : 'todo'
   });
+
+  return connection;
 };
 
 controller.query = function(query){
-  if (connection) {
-    connection.connect();
-    var deferred = Q.defer()
+  var deferred = Q.defer()
 
-    connection.query(query, function(err, rows, fields) {
-      if (err) deferred.reject(err);
-      else deferred.resolve(rows[0].solution)
-    });
+  connection.query(query, function(err, rows, fields) {
+    if (err) deferred.reject(err);
+    else deferred.resolve(rows)
+  });
 
-    connection.end();
-  }
+  return deferred.promise;
+};
+
+controller.create = function (query, params) {
+  var deferred = Q.defer()
+  console.log(query)
+  console.log(params)
+  connection.query(query, params, function(err, rows, fields) {
+    if (err) deferred.reject(err);
+    else deferred.resolve(rows)
+  });
+
+  return deferred.promise;
 };
 
 module.exports = controller;
