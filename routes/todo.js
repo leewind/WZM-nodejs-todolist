@@ -3,7 +3,7 @@ var router = express.Router();
 var mysql = require('../controller/mysql');
 
 /**
- * @description 获得todolist所有的列表数据，不做分页处理
+ * @description 向todolist添加数据
  * @param {Request} req 请求对象
  * @param {Response} res 返回对象
  * @return {Response} 返回对象
@@ -44,6 +44,18 @@ router.get('/', function (req, res) {
         res.json({error: error})
       }
     );
+});
+
+router.delete('/:id', function (req, res) {
+
+});
+
+router.put('/:id', function (req, res) {
+
+});
+
+router.get('/:id', function (req, res) {
+
 });
 
 module.exports = router;
