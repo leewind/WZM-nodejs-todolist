@@ -38,10 +38,19 @@ db.set('key1', 'value1', function(err) {
 
 ##Promise
 
-> The core idea behind promises is that a promise represents the result of an asynchronous operation. A promise is in one of three different states:
-> + pending - The initial state of a promise.
-> + fulfilled - The state of a promise representing a successful operation.
-> + rejected - The state of a promise representing a failed operation.
+> promise是对异步编程的一种抽象。它是一个代理对象，代表一个必须进行异步处理的函数返回的值或抛出的异常。
+
+callback是编写Javascript异步代码最最最简单的机制。可用这种原始的callback必须以牺牲控制流、异常处理和函数语义为代价，而我们在同步代码中已经习惯了它们的存在，不适应！Promises能带它们回来。
+
+一般我们认为一个异步过程有3种状态，`pending`|`success`|`fail`，`Promise`就是将这些状态抽象成方法，`pending`过程是第一步的执行过程，其返回值带有`success`和`fail`两个方法的对象。
+
+举例来说
+```
+$.when($.ajax(setting))
+  .done(function())
+  .fail(function());
+```
+`when`其实可以看作是中间态，`done`和`fail`是执行的返回对象带有的方法
 
 ##参考
 + [https://www.promisejs.org/](https://www.promisejs.org/)
