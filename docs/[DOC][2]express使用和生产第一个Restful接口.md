@@ -149,9 +149,9 @@ Tip：推荐使用`Chrome`进行调试，关于接口调试的`Chrome`可以点[
 1. 如果程序挂掉了，没有守护进程重启程序
 2. 开发中如果文件被修改了需要杀掉再重启
 
-[node-supervisor](https://github.com/isaacs/node-supervisor)提供了这种功能，在站点上可以考虑使用`node-supervisor`作为守护进程
+[node-supervisor](https://github.com/isaacs/node-supervisor)提供了这种功能，在站点上可以考虑使用`node-supervisor`作为守护进程，在开发过程中非常推荐使用！！
 
-`Yeoman`已经为`grunt`配置了一系列的脚本，所以在调试过程中，会有很多的调试信息反馈出来，这点非常重要，提高了调试的效率
+`Yeoman`已经为`grunt`配置了一系列的脚本，所以在调试过程中，会有很多的调试信息反馈出来，这里没有配置`watch`功能这个后期可以考虑来做
 
 ##参考
 1. [node-supervisor](https://github.com/isaacs/node-supervisor)

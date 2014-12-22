@@ -28,8 +28,6 @@ controller.query = function(query){
 
 controller.create = function (query, params) {
   var deferred = Q.defer()
-  console.log(query)
-  console.log(params)
   connection.query(query, params, function(err, rows, fields) {
     if (err) deferred.reject(err);
     else deferred.resolve(rows)
