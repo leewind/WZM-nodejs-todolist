@@ -51,7 +51,6 @@ router.get('/', function (req, res) {
  * @param {Request} req 请求对象
  * @param {Response} res 返回对象
  * @return {Response} 返回对象
- *
  */
 router.delete('/:id', function (req, res) {
   var params = {
@@ -70,11 +69,30 @@ router.delete('/:id', function (req, res) {
     );
 });
 
-router.put('/:id', function (req, res) {
+/**
+ * @description 从todolist中获取id的数据
+ * @param {Request} req 请求对象
+ * @param {Response} res 返回对象
+ * @return {Response} 返回对象
+ */
+router.get('/:id', function (req, res) {
+  var params = {
+    id : req.param('id'),
+  }
 
+  mysql.get('SELECT * FROM list WHERE ?', params)
+    .then(
+      function (data) {
+        res.json({data: data});
+      },
+      function (error) {
+        console.error('[ErrorInfo]:' + error);
+        res.json({error: error});
+	  }
+    );
 });
 
-router.get('/:id', function (req, res) {
+router.put('/:id', function (req, res) {
 
 });
 
