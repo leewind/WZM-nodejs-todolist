@@ -56,4 +56,14 @@ controller.get = function(query, params) {
   return deferred.promise;
 }
 
+controller.update = function(query, params) {
+  var deferred = Q.defer();
+  connection.query(query, params, function(err, rows, fields) {
+    if (err) deferred.reject(err);
+	else deferred.resolve(rows);
+  });
+
+  return deferred.promise;
+}
+
 module.exports = controller;
