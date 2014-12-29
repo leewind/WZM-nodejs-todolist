@@ -97,4 +97,4 @@ OK 好了大功告成，运行一下`grunt test`看看有什么结果！！
 ###Travis
 `github`提供了一个`ci`的工具叫做`travis`，具体访问[https://travis-ci.org/](https://travis-ci.org/)
 
-我在项目里面建立了`.travis.yml`可以在`travis.org`里面直接跑测试，玩玩看吧
+我在项目里面建立了`.travis.yml`可以在`travis.org`里面直接跑测试，玩玩看吧，这里测试估计是通不过的，不过意思是那个意思～～
