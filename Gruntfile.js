@@ -50,6 +50,15 @@ module.exports = function (grunt) {
           livereload: reloadPort
         }
       }
+    },
+    mochaTest: {
+      test: {
+        options: {
+          report: 'spec',
+          clearRequireCache: false
+        },
+        src: ['test/**/*.js']
+      }
     }
   });
 
@@ -71,9 +80,13 @@ module.exports = function (grunt) {
         });
     }, 500);
   });
-  
+
   grunt.registerTask('default', [
-    'develop', 
+    'develop',
     'watch'
+  ]);
+
+  grunt.registerTask('test', [
+    'mochaTest'
   ]);
 };
