@@ -6,11 +6,11 @@ before_install:
   - npm install -g bower
   - mysql -e 'create databse IF NOT EXISTS todo;' -uroot
   - sh -c "mysql -e 'CREATE TABLE todo.list (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` tinytext COLLATE utf8_unicode_ci,
-  `content` longtext COLLATE utf8_unicode_ci,
-  `level` tinytext COLLATE utf8_unicode_ci,
-  PRIMARY KEY (`id`)
+  id int(11) NOT NULL AUTO_INCREMENT,
+  username tinytext COLLATE utf8_unicode_ci,
+  content longtext COLLATE utf8_unicode_ci,
+  level tinytext COLLATE utf8_unicode_ci,
+  PRIMARY KEY (id)
   ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;'"
 script:
   - bower install
